@@ -7,6 +7,9 @@ body{
     color:white;
 
 }
+a:hover{
+    text-decoration: none;
+}
 #main{
     width:100%;
     height:100%;
@@ -149,31 +152,120 @@ box-shadow: 1px 1px 8px 2px rgba(0,0,0,.2);
 }
 header{
     background-color:white;
+    height: 70px;
 }
 .homeLogo{
     width:250px;
-    border-right: 1px solid #979797;
+    border-right: 1px solid #D8D8D8;
+    display: inline-block;
 }
 .subscribe{
     margin-left:25px;
     width:335px;
     position: relative;
+    display: inline-block;
 }
 .subscribeinput{
     width:100%;
     background-color:#F9FAFC;
     border-radius: 21px;
     height:43px;
+    border:0;
 }
 .subBtn {
     background-color: #5BBDB7;
     border-radius: 25px;
     position: absolute;
-    right:2px;
-    top:2px;
+    right:5px;
+    top:5px;
     height:34px;
     width:116px;
     text-align: center;
     color:white;
     font-size: 14px;
+}
+.subBtn:hover{
+    color:white;
+}
+.blackCircle{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: black;
+    margin:0 auto;
+  }
+.fAQ,.notification,.personalInfo{
+    border-left: 1px solid #D8D8D8 ;
+    display: inline-block;
+    padding:0 25px;
+    padding-top:7%;
+    height:70px;
+float: left;
+}
+    .notification i{
+        color:black;
+        font-size:20px;
+    }
+#homeBody{
+    background-color: #F9FAFC;
+
+}
+.content{
+    background-color: #F9FAFC;
+padding:25px  40px;
+}
+.personalInfo{
+    cursor: pointer;
+    display: table;
+}
+.personaImg{
+width: 36px;
+height:36px;
+border-radius: 50%;
+overflow:hidden;
+margin-right:16px;
+display: inline-block;}
+.personName{
+    display: inline-block;
+    font-size:15px;
+    color:black;
+    display: table-cell;
+    vertical-align: middle;
+}
+.bookBox{
+    width:219px;
+    padding:17px;
+    background-color: white;
+    border-radius: 15px;;
+    display: inline-block;
+    margin-right:25px;
+    margin-bottom: 30px;
+}
+
+.bookImg{
+    width:169px;
+    margin:0 auto;
+    height:188px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.bookDetails{
+    margin-top:10px;
+}
+.bookDetails h6{
+color:#5BBDB7;
+font-size: 17px;
+}
+.bookDetails p{
+    font-size: 14px;
+    color:#ACACAC;
+    margin:0;
+}
+@media(min-width:350px) and (max-width:767px){
+    header{
+        height: auto;
+    }
+    .homeLogo{
+        width:50%;
+    }
 }
