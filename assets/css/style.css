@@ -1,0 +1,179 @@
+@font-face{
+    font-family: 'myanmar-sangam-mn';
+    src: url('../fonts/myanmar-sangam-mn.ttf');
+}
+body{
+    font-family: 'myanmar-sangam-mn';
+    color:white;
+
+}
+#main{
+    width:100%;
+    height:100%;
+    position: relative;
+    padding-top:80px;
+    z-index: 1;
+}
+.overlay{
+    background-color:#000;
+    z-index: -1;
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+}
+#main:before{
+    background-image: url("../images/books.png");
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    opacity: .15;
+    z-index:0;
+    top:0;
+    left:0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img{
+    width:100%;
+}
+.whiteFooter{
+    content: "";
+    position: absolute;
+    width:100%;
+    z-index:1;
+    left:0;  
+    bottom:0;
+    right:0;
+}
+.logo{
+    width:160px;
+    margin-bottom:50px;
+}
+.mainHero h1{
+    font-size:37px;
+}
+.mobileImg{
+width:100%;
+}
+.signBtn{
+background-color:white;
+border-radius: 25px;
+display: block;
+margin-top:42px;
+text-align: center;
+cursor: pointer;
+width:150px;
+height:49px;
+vertical-align: middle;
+}
+.signForm{
+    width:100%;
+    background-color: white;
+    border-radius: 8px;
+    padding:28px;
+}
+.signForm h2{
+    font-size:30px;
+    color:black
+}
+.signForm span{
+    font-size:14px;
+    color:#A1A1A1;
+}
+.signInfoForm{
+
+width:100%}
+.signInfoForm  .form-group{
+    margin-top:20px;
+    position: relative;
+}
+.signInfoForm label{
+    font-size:14px;
+    margin:0;
+    color:black;
+}
+.signInfoForm .form-control,.subscribeinput{
+border:1px solid #EBEBEB;
+width:100%;
+border-radius: 4px;
+border-left:2px solid #5BBDB7;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+color:#BDBDBD;
+font-size:13px;
+height:45px;
+
+}
+.signInfoForm .form-control:focus,.subscribeinput:focus{
+    box-shadow: none;;
+}
+.signInfoForm .form-control::placeholder{
+    font-size:13px;
+    color:#BDBDBD;
+}
+.form-group i{
+position: absolute;
+right: 7%;
+color: #BEBEBE;
+cursor: pointer;
+top: 48%;
+}
+.signFormBtn{
+    width:100%;
+    text-align: center;
+    color:white;
+    border-radius: 4px;
+    background-color: #5BBDB7;
+    margin-top:28px;
+    font-size:15px;
+    height:45px;
+}
+.forgetPassword{
+    font-size:14px;
+    color:black;
+    text-align: center;
+    display: block;
+    margin-top:22px;
+}
+.signFormBtn:hover{
+box-shadow: 1px 1px 8px 2px rgba(0,0,0,.2);
+   transition: all .5s;;
+   color:white;
+}
+header{
+    background-color:white;
+}
+.homeLogo{
+    width:250px;
+    border-right: 1px solid #979797;
+}
+.subscribe{
+    margin-left:25px;
+    width:335px;
+    position: relative;
+}
+.subscribeinput{
+    width:100%;
+    background-color:#F9FAFC;
+    border-radius: 21px;
+    height:43px;
+}
+.subBtn {
+    background-color: #5BBDB7;
+    border-radius: 25px;
+    position: absolute;
+    right:2px;
+    top:2px;
+    height:34px;
+    width:116px;
+    text-align: center;
+    color:white;
+    font-size: 14px;
+}
