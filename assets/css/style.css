@@ -114,8 +114,12 @@ font-size:13px;
 height:45px;
 
 }
-.signInfoForm .form-control:focus,.subscribeinput:focus{
-    box-shadow: none;;
+.form-control:focus{
+    box-shadow: 0 0 0 0.2rem rgba(91, 189, 183,.25);    
+}
+button:focus{
+    box-shadow: 0 0 0 0.2rem rgba(91, 189, 183,.25);    
+
 }
 .signInfoForm .form-control::placeholder{
     font-size:13px;
@@ -134,9 +138,11 @@ top: 48%;
     color:white;
     border-radius: 4px;
     background-color: #5BBDB7;
+    margin:0 auto;
     margin-top:28px;
     font-size:15px;
     height:45px;
+
 }
 .forgetPassword{
     font-size:14px;
@@ -261,11 +267,78 @@ font-size: 17px;
     color:#ACACAC;
     margin:0;
 }
+
+.confirmPass{
+    background-color:white;
+    color:black;
+    border:2px solid #5BBDB7;
+    text-align: center;
+    width:156px;
+    height:45px;
+    display: block;
+    border-radius: 22px;
+    margin-top: 25px;;
+    transition: .5s all;
+}
+.confirmPass:hover{
+background-color: #5BBDB7;
+color:white;
+transition: .5s all;
+}
+
+.changePassModal .modal-dialog {
+    width:432px;
+
+}
+.changePassModal  .modal-content{
+    padding:0;
+}
+.changePassModal .modal-content{
+    width:100%;
+    padding:45px 25px;
+    text-align: center;
+    border:0;
+    border-radius: 25px;
+    position: relative;
+}
+.changePassModal h5{
+font-size:19px ;
+color:black;
+margin-bottom:10px;
+}
+.changePassModal p{
+    font-size:15px;
+    color:black;
+    display: block;
+    margin-bottom: 0rem;
+}
+
+.changePassModal .modal-body .form-group{
+    margin-top:25px;
+}
+.changePassModal .modal-body .form-control{
+    border:0;
+    border-bottom: 1px solid #E2E2E2;
+    border-radius: 0;
+}
+
+.changePassModal .modal-body .form-control::placeholder{
+    font-size: 12px;
+    color:#BDBDBD;
+}
+.changePassModal .close{
+    position: absolute;
+    right:10%;
+    top:10%;
+}
 @media(min-width:350px) and (max-width:767px){
     header{
         height: auto;
     }
     .homeLogo{
         width:50%;
+    }
+    .changePassModal .modal-dialog{
+        width:100%;
     }
 }
