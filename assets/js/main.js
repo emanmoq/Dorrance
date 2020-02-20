@@ -30,6 +30,9 @@ jQuery(function ($) {
         $(".FAQDropdown").css("display","none");
           $(".profileDropDown").toggle();
       });
+      $(".bookDetailsBtn").click(function(){
+        $(".StatisticsBox").css("display","block");
+      })
     
 });
 

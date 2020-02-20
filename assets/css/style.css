@@ -204,6 +204,9 @@ header{
     background-color: black;
     margin:0 auto;
   }
+  .leftSide{
+      padding:10px 0;
+  }
   .rightSide{
     float:right
   }
@@ -256,6 +259,9 @@ display: inline-block;}
     margin-bottom: 30px;
     cursor: pointer;
     transition: all .5s;
+}
+.bookBox.active{
+    border:1px solid #5BBDB7;
 }
 .bookBox:hover{
     box-shadow:0 1px 6px rgba(0,0,0,.2);
@@ -357,6 +363,7 @@ margin-bottom:10px;
         box-shadow: 0 12px 14px rgba(0,0,0,.1);
     border-radius: 10px;
     display: none;
+    z-index: 6666666;
 }
 .notifyDropDown:before,.FAQDropdown:before,.profileDropDown:before{
     content: "";
@@ -541,7 +548,9 @@ textarea::placeholder{
     margin-bottom:28px;
 }
 .StatisticsBox{
+    display: none;
 }
+
 .fromTo{
     width:48%;
     background-color: #F9FAFC;
@@ -558,7 +567,7 @@ textarea::placeholder{
     
 }
 .StatisticsDetails{
-    width:40%;
+    width:35%;
 }
 .StatisticsDetails h6{
     font-size:17px;
@@ -571,9 +580,10 @@ textarea::placeholder{
     margin:0;
 }
 .StatisticsBox .date,.StatisticsBox .price,.StatisticsBox .city{
-    width:14%;
+    width:16%;
     margin-right:0;
 }
+
 @media(min-width:320px) and (max-width:767px){
     header{
         height: auto;
@@ -639,5 +649,55 @@ textarea::placeholder{
 .bookDetailsBox{
  
 width:100%;
+margin-bottom:20px;
 }
+.content{
+padding:10px;
+}
+.bookDetailsBox .bookImg, .bookDetailsBox .bookDetails{
+    width:100%;
+    display: block;
+    margin-bottom:20px;
+}
+
+.booksCont .bookBox{
+    width:100%;
+}
+.StatisticsDetails h6{
+    font-size:14px;
+}
+.StatisticsBox .date, .StatisticsBox .price, .StatisticsBox .city{
+    width:17%;
+}
+.StatisticsDetails{
+    width:41%;
+    margin-right:0;
+}
+
+.Date{
+    font-size:12px;
+}
+.StatisticsItem p{
+    font-size: 13px;;
+}
+.StatisticsBox {
+    padding:10px;
+}
+.notifyItemBox{
+    padding:20px 10px;
+}
+}
+
+@media(min-width:768px) and (max-width:1200px){
+    .homeLogo{
+        width:38%;
+    }
+    .subscribe{
+width:60%;
+        margin-left: 0;;
+    }
+    .StatisticsBox {
+        margin-top:20px;
+    }
+
 }
