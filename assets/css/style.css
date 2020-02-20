@@ -15,29 +15,30 @@ a:hover{
     height:100%;
     position: relative;
     padding-top:80px;
-    z-index: 1;
+z-index: 2;
 }
 .overlay{
-    background-color:#000;
+    background-image: url("../images/books.png");
     z-index: -1;
     position: absolute;
     width:100%;
     height:100%;
     top:0;
     left:0;
+    opacity: .15;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #main:before{
-    background-image: url("../images/books.png");
+    background-color:#000;
     content: "";
     position: absolute;
     width:100%;
     height:100%;
-    opacity: .15;
-    z-index:0;
+    z-index:-1;
     top:0;
     left:0;
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 img{
     width:100%;
@@ -46,7 +47,7 @@ img{
     content: "";
     position: absolute;
     width:100%;
-    z-index:1;
+    z-index:0;
     left:0;  
     bottom:0;
     right:0;
@@ -77,6 +78,7 @@ vertical-align: middle;
     background-color: white;
     border-radius: 8px;
     padding:28px;
+    box-shadow:0 1px 4px rgba(0,0,0,.2)
 }
 .signForm h2{
     font-size:30px;
@@ -114,8 +116,9 @@ font-size:13px;
 height:45px;
 
 }
-.form-control:focus{
-    box-shadow: 0 0 0 0.2rem rgba(91, 189, 183,.25);    
+.form-control:focus,textarea:focus{
+    box-shadow: 0 0 0 0.2rem rgba(91, 189, 183,.25);  
+    border:0 !important;  
 }
 button:focus{
     box-shadow: 0 0 0 0.2rem rgba(91, 189, 183,.25);    
@@ -159,6 +162,7 @@ box-shadow: 1px 1px 8px 2px rgba(0,0,0,.2);
 header{
     background-color:white;
     height: 70px;
+    position: relative;
 }
 .homeLogo{
     width:250px;
@@ -200,6 +204,9 @@ header{
     background-color: black;
     margin:0 auto;
   }
+  .rightSide{
+    float:right
+  }
 .fAQ,.notification,.personalInfo{
     border-left: 1px solid #D8D8D8 ;
     display: inline-block;
@@ -214,6 +221,7 @@ float: left;
     }
 #homeBody{
     background-color: #F9FAFC;
+    color:black
 
 }
 .content{
@@ -246,10 +254,16 @@ display: inline-block;}
     display: inline-block;
     margin-right:25px;
     margin-bottom: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.bookBox:hover{
+    box-shadow:0 1px 6px rgba(0,0,0,.2);
+    transition: all .5s;
 }
 
 .bookImg{
-    width:169px;
+    width:95%;
     margin:0 auto;
     height:188px;
     overflow: hidden;
@@ -277,6 +291,7 @@ font-size: 17px;
     height:45px;
     display: block;
     border-radius: 22px;
+    margin:0 auto;
     margin-top: 25px;;
     transition: .5s all;
 }
@@ -331,14 +346,298 @@ margin-bottom:10px;
     right:10%;
     top:10%;
 }
-@media(min-width:350px) and (max-width:767px){
+.notifyDropDown,.FAQDropdown,.profileDropDown{
+    width:370px;
+    height:auto;
+    background-color: white;
+    padding:30px 18px;
+    position: absolute;
+    right:1%;
+    top: 120%;
+        box-shadow: 0 12px 14px rgba(0,0,0,.1);
+    border-radius: 10px;
+    display: none;
+}
+.notifyDropDown:before,.FAQDropdown:before,.profileDropDown:before{
+    content: "";
+    position: absolute;
+    margin-top:-6px;
+    margin-left:-5px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    right: 45%;
+    top: -1%;
+}
+
+.FAQDropdown:before{
+    right: 65% 
+}
+.profileDropDown:before{
+    right: 25% 
+}
+.notifyItemBox{
+    background-color:#F9FAFC;
+    width:100%;
+    border-radius: 15px;
+    margin-bottom:10px;
+    padding:20px 15px;
+
+}
+.Date,.notifyDetails,.price,.city,.StatisticsDetails{
+    width:13%;
+    display: inline-block;
+    margin-right:30px;
+    font-size: 14px;
+    color:black;
+    vertical-align: middle;
+}
+.notifyDetails{
+    width:50%;
+}
+.notifyDetails h6{
+    color:#5BBDB7;
+    margin:0;
+
+}
+.notifyDetails h4{
+    font-size:15px;
+    margin:0;
+
+}
+.notifyDetails p,.price p{
+font-size: 13px;
+color:#ACACAC;
+margin:0;
+}
+.price{
+    margin-right:0;
+    text-align: rightF ;
+}
+.price p{
+    font-size: 14px;;
+}
+.FAQDropdown h2{
+    font-size:15px;
+}
+.faqToggle a h4,.faqToggle p{
+    font-size:13px;
+    color:#BDBDBD;
+}
+.faqToggle {
+    padding-bottom:10px;
+    border-bottom: 1px solid #BDBDBD;
+    margin-top:20px;
+}
+.faqToggle p{
+    display: none;
+
+}
+.AskExpert{
+    background-color: #F9FAFC;
+    width:100%;
+    border-radius: 14px;
+    padding:22px;
+    margin-top:17px;
+}
+textarea::placeholder{
+    font-size: 17px;
+    color:#919191;
+}
+.AskExpert textarea{
+    border:0;
+    width:100%;
+    height:100px;
+    background-color: transparent;
+    resize: none;
+}
+.profileDropDown .profileDropDownImg{
+    width:186px;
+    height:186px;
+    border-radius: 50%;
+    margin:0 auto;
+    margin-bottom:30px;
+    overflow: hidden;
+}
+.profileDropDown h2{
+    font-size:25px;
+    margin-bottom:0;
+}
+.profileDropDown span{
+    font-size: 15px;
+    color:#8D8D8D;
+}
+.changePass{
+    margin-bottom: 60px;
+    width:177px;
+    font-size: 16px;;
+}
+.logout{
+    font-size:16px;
+    color:#5BBDB7
+}
+.booksCont{
+    width:45%;
+    display: inline-block;
+    float: left;
+}
+.bookDetailsBox{
+    width:100%;
+        background-color:white;
+    border-radius: 22px;
+    padding:27px 23px;
+    height:676px;
+
+}
+.bookDetailsBox .bookImg,.bookDetailsBox .bookDetails{
+    display: inline-block;
+    width:40%;
+    float: left;
+}
+.bookDetailsBox .bookDetails{
+    margin-left:10px;
+    width:49%;
+}
+.bookDetailsBox .bookDetails h6{
+    font-size:21px;
+    color:black;
+    margin-bottom:8px;
+}
+.bookDetails span{
+    font-size: 14px;
+    color:#ACACAC;
+}
+.bookDetails span span{
+    color:black
+}
+.bookDetailsBox .bookDetails p{
+    color:#5BBDB7;
+}
+.bookProfileDetails h6{
+    color:black;
+    font-size:15px;
+}
+.bookProfileDetails{
+    margin-top:10px;
+}
+.bookProfileDetails p{
+    font-size:15px;
+    color:#ACACAC;
+    margin:0;
+}
+.bookProfileDetails p span{
+    color:#5BBDB7
+}
+.bookDetailsBtn{
+    width:232px;
+    margin-top:46px;
+}
+.booksCont .bookBox{
+    margin-right:0;
+    width:90%;
+}
+.bookDetailsBox h6{
+    font-size:17px;
+    margin-bottom:28px;
+}
+.StatisticsBox{
+}
+.fromTo{
+    width:48%;
+    background-color: #F9FAFC;
+    font-size:14px;
+    color:#8D8D8D;
+    border-radius: 14px;
+    height:40px;
+    padding:10px;
+    display: inline-block;
+}
+.StatisticsItem{
+    margin-top:15px;
+   
+    
+}
+.StatisticsDetails{
+    width:40%;
+}
+.StatisticsDetails h6{
+    font-size:17px;
+    color:#5BBDB7;
+    margin-bottom: 0;
+}
+.StatisticsItem p{
+    font-size:14px;
+    color:#ACACAC;
+    margin:0;
+}
+.StatisticsBox .date,.StatisticsBox .price,.StatisticsBox .city{
+    width:14%;
+    margin-right:0;
+}
+@media(min-width:320px) and (max-width:767px){
     header{
         height: auto;
     }
     .homeLogo{
-        width:50%;
+        width:100%;
     }
     .changePassModal .modal-dialog{
         width:100%;
     }
+    .logo{
+        margin:10px auto
+    }
+    .mainHero{
+        text-align: center;
+    }
+    .signForm{
+        margin-top:20px;
+    }
+    .signBtn{
+        margin:20px auto
+    }
+    .mobileImg{
+        display: none;
+    }
+    .rightSide{
+        float: none;
+    }
+    .bookBox {
+        margin:0px auto;
+        margin-bottom: 30px;
+        width:100%;
+    }
+    .notifyDropDown:before,.FAQDropdown:before,.profileDropDown:before{
+        display: none;
+    }
+    .notifyDropDown,.FAQDropdown,.profileDropDown{
+        
+    width:320px;}
+    .fAQ,.notification,.personalInfo{
+        padding:10px;
+        border-left:0;
+        height:auto
+    }
+    .personaImg {
+        width: 18px;
+        height: 18px;
+        margin-right: 11px;}
+        .notification i {
+            color: black;
+            font-size: 14px;
+        }
+        .blackCircle{
+            width:14px;
+            height:14px;
+        }
+        .subscribe {
+            width: 95%;
+            margin:0 auto;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+.bookDetailsBox{
+ 
+width:100%;
+}
 }
