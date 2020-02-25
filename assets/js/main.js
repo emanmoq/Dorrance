@@ -33,6 +33,7 @@ jQuery(function ($) {
       $(".bookDetailsBtn").click(function(){
         $(".StatisticsBox").css("display","block");
       })
+ 
     
 });
 
