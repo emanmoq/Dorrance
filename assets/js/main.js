@@ -33,7 +33,10 @@ jQuery(function ($) {
       $(".bookDetailsBtn").click(function(){
         $(".StatisticsBox").css("display","block");
       })
- 
+      $(".changePass").click(function(){
+          $(this).parent().css("display","none");
+        $("#changePassModal").show();
+      })
     
 });
 

@@ -20,15 +20,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-md-7 col-5">
-                <div class="leftSide">
-                    <div class="homeLogo">
-                        <a href="home.html"><img src="assets/images/blacklogo.png" alt=""></a>
+                    <div class="leftSide">
+                        <div class="homeLogo">
+                            <a href="home.html"><img src="assets/images/blacklogo.png" alt=""></a>
+                        </div>
+                        <div class="subscribe  d-lg-inline-block  d-md-inline-block d-none">
+                            <input type="email" class="form-control subscribeinput" placeholder="email">
+                            <a href="#" class="subBtn btn"> subscribe</a>
+                        </div>
                     </div>
-                    <div class="subscribe  d-lg-inline-block  d-md-inline-block d-none">
-                        <input type="email" class="form-control subscribeinput" placeholder="email">
-                        <a href="#" class="subBtn btn"> subscribe</a>
-                    </div>
-                </div>
                 </div>
                 <div class="col-lg-6 col-md-5 col-7">
                     <div class="clearfix">
@@ -167,8 +167,8 @@
                                 </div>
                                 <h2>user name</h2>
                                 <span>eee@gmail.com</span>
-                                <button class="btn confirmPass changePass" data-toggle="modal"
-                                    data-target="#changePassModal"> Change Passowrd </button>
+                                <button class="btn confirmPass changePass" data-toggle="modal"   data-target="#changePassModal"> Change Passowrd
+                                </button>
                                 <a href="#" class="logout"> logout</a>
 
                             </div>
@@ -392,17 +392,18 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <h5 class="modal-title"> Update Password</h5>
-                <p>To protect and maintain account security, please add a new password.</p>
+                <p>To protect and maintain account <br>
+                    security, please add a new password.</p>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-body">
                     <form action="">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="new password">
+                            <input type="text" class="form-control" placeholder="New password">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="confirm password">
+                            <input type="text" class="form-control" placeholder="Confirm password">
                         </div>
                         <button class="btn confirmPass"> OK </button>
                     </form>
